@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insurance Empanelment — MS Healthcare Services</title>
+<meta name="description" content="Get your hospital empanelled with CGHS, DGEHS, PMJAY, GIPSA and 25+ insurance companies and TPAs. Expert empanelment support by MS Healthcare Services.">
+<meta name="theme-color" content="#0a1a3a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a1a3a'/><text x='50' y='68' font-size='60' text-anchor='middle' fill='%23d4a017' font-family='Arial' font-weight='bold'>MS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,Arial,sans-serif;background:#ffffff;color:#1a1a1a;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--navy:#0a1a3a;--navy-2:#1a2f5c;--navy-3:#254080;--gold:#d4a017;--gold-2:#b8860b;--gold-light:#e8c547;--cream:#fafaf7;--off:#f8f9fc;--white:#ffffff;--muted:#64748b;--line:#e2e8f0}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px 0;transition:all .3s}
+.nav.scrolled{box-shadow:0 4px 20px rgba(10,26,58,.06);padding:12px 0}
+.nav-in{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-logo{width:52px;height:52px;flex-shrink:0}
+.brand-logo svg{width:100%;height:100%}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text b{font-family:'Poppins',sans-serif;font-size:17px;color:var(--navy);font-weight:800;letter-spacing:-.3px}
+.brand-text small{font-size:9.5px;color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600;color:var(--navy)}
+.nav-links a{transition:color .25s;position:relative;padding:6px 0}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:.3s;transform-origin:left}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--gold)}
+.nav-cta{background:var(--navy);color:white !important;padding:12px 24px;border-radius:99px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 6px 20px rgba(10,26,58,.2)}
+.nav-cta:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 10px 28px rgba(212,160,23,.4)}
+.nav-cta::after{display:none !important}
+.hamburger{display:none;background:transparent;border:0;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px}
+
+/* ===== PAGE HERO ===== */
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,var(--navy-3) 100%);color:white;padding:90px 0 100px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-30%;right:-20%;width:60%;height:120%;background:radial-gradient(circle,rgba(212,160,23,.15),transparent 60%);pointer-events:none;animation:heroGlowE 10s ease-in-out infinite alternate}
+@keyframes heroGlowE{0%{transform:translate(0,0) scale(1);opacity:.8}100%{transform:translate(-40px,20px) scale(1.15);opacity:1}}
+.page-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse at center,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center,black 20%,transparent 70%)}
+.page-hero-in{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:5}
+.page-hero .eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(212,160,23,.15);border:1px solid rgba(212,160,23,.4);color:var(--gold-light);padding:8px 18px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+.page-hero .eyebrow::before{content:'';width:8px;height:8px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px var(--gold);animation:pulseGoldE 2s infinite}
+@keyframes pulseGoldE{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.page-hero h1{font-family:'Poppins',sans-serif;font-size:clamp(38px,5.5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:20px}
+.page-hero h1 .gold{color:var(--gold)}
+.page-hero p{font-size:17px;color:rgba(255,255,255,.8);max-width:680px;line-height:1.7}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{background:white;border-bottom:1px solid var(--line);padding:16px 0;font-size:13px;color:var(--muted)}
+.breadcrumb-in{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.breadcrumb a{color:var(--navy);font-weight:600;transition:color .2s}
+.breadcrumb a:hover{color:var(--gold)}
+.breadcrumb .sep{color:var(--muted)}
+.breadcrumb .current{color:var(--muted);font-weight:500}
+
+/* ===== SECTION BASE ===== */
+section{padding:100px 0;position:relative}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+.sec-eyebrow::before{content:'';width:24px;height:2px;background:var(--gold)}
+.sec-title{font-family:'Poppins',sans-serif;font-size:clamp(30px,4.2vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--navy);margin-bottom:16px}
+.sec-title .gold{color:var(--gold)}
+.sec-sub{color:var(--muted);font-size:16.5px;max-width:680px;line-height:1.7;margin-bottom:56px}
+.sec-center{text-align:center}
+.sec-center .sec-sub{margin-left:auto;margin-right:auto}
+
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.3,1.1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ===== EMPANELMENT CATEGORIES ===== */
+.cat-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:44px}
+.cat-tab{background:white;border:1.5px solid var(--line);color:var(--navy);padding:12px 24px;border-radius:99px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.cat-tab:hover{border-color:var(--gold);transform:translateY(-2px)}
+.cat-tab.active{background:var(--navy);color:white;border-color:var(--navy);box-shadow:0 10px 24px rgba(10,26,58,.2)}
+.cat-tab .count{background:rgba(0,0,0,.1);padding:3px 9px;border-radius:99px;font-size:11px;font-weight:800}
+.cat-tab.active .count{background:rgba(212,160,23,.3);color:var(--gold-light)}
+
+.cat-section{display:none}
+.cat-section.active{display:block;animation:catFade .5s ease}
+@keyframes catFade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+
+.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.partner-card{
+  background:white;
+  border:1.5px solid var(--line);
+  border-radius:16px;
+  padding:26px 20px;
+  text-align:center;
+  transition:all .35s cubic-bezier(.2,.9,.3,1.1);
+  position:relative;
+  overflow:hidden;
+}
+.partner-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:.4s;
+}
+.partner-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(212,160,23,.5);
+  box-shadow:0 24px 50px rgba(10,26,58,.1);
+}
+.partner-card:hover::before{transform:scaleX(1)}
+.partner-logo{
+  width:64px;height:64px;
+  border-radius:16px;
+  background:linear-gradient(135deg,rgba(212,160,23,.12),rgba(10,26,58,.06));
+  border:1px solid rgba(212,160,23,.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;
+  margin:0 auto 16px;
+  transition:all .35s;
+}
+.partner-card:hover .partner-logo{background:var(--navy);color:var(--gold);transform:rotate(-6deg)}
+.partner-card h4{
+  font-family:'Poppins',sans-serif;
+  font-size:15px;
+  font-weight:700;
+  color:var(--navy);
+  letter-spacing:-.2px;
+  margin-bottom:6px;
+}
+.partner-card p{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:600;
+  letter-spacing:.3px;
+  text-transform:uppercase;
+}
+
+@media(max-width:1000px){
+  .partner-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:700px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:20px;gap:16px;box-shadow:0 20px 30px rgba(0,0,0,.1);border-top:1px solid var(--line)}
+  .hamburger{display:flex}
+  .brand-text b{font-size:15px}
+  .brand-text small{font-size:8px}
+  .brand-logo{width:44px;height:44px}
+  .page-hero{padding:60px 0 70px}
+  .page-hero h1{font-size:clamp(30px,9vw,44px);letter-spacing:-1.5px}
+  section{padding:70px 0}
+  .partner-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .partner-card{padding:20px 16px}
+  .partner-logo{width:52px;height:52px;font-size:24px}
+  .partner-card h4{font-size:14px}
+  .partner-card p{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="msG1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d4a017"/><stop offset="100%" stop-color="#b8860b"/></linearGradient></defs>
+          <circle cx="50" cy="50" r="46" fill="#0a1a3a" stroke="url(#msG1)" stroke-width="2.5"/>
+          <path d="M50 22 L50 78 M42 30 L50 22 L58 30 M34 38 L34 62 M66 38 L66 62 M34 50 L66 50" stroke="url(#msG1)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 70 Q50 66 72 70" stroke="url(#msG1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <b>MS HEALTHCARE</b>
+        <small>Services</small>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="empanelment.html" class="active">Empanelment</a>
+      <a href="contact.html">Contact</a>
+      <a href="tel:8683846801" class="nav-cta">📞 Talk to Expert</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-in">
+    <span class="eyebrow">Empanelment Network</span>
+    <h1>
+      Get Empanelled with<br>
+      India's <span class="gold">Top Insurers.</span>
+    </h1>
+    <p>Government schemes, leading insurance companies, and major TPAs — we help your hospital get empanelled with all of them, opening up new patient streams and steady revenue.</p>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-in">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <span class="current">Empanelment</span>
+  </div>
+</div><!-- ===== EMPANELMENT SECTION ===== -->
+<section>
+  <div class="container">
+    <div class="sec-center reveal">
+      <span class="sec-eyebrow">Insurance Partners</span>
+      <h2 class="sec-title">25+ <span class="gold">Insurers & TPAs</span> We Work With</h2>
+      <p class="sec-sub">We handle the entire empanelment process — documentation, applications, follow-ups, and coordination — until your hospital is approved and ready to serve insured patients.</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="cat-tabs reveal">
+      <button class="cat-tab active" onclick="showCat('govt', this)">
+        🏛️ Government <span class="count">3</span>
+      </button>
+      <button class="cat-tab" onclick="showCat('insurance', this)">
+        🛡️ Insurance <span class="count">15+</span>
+      </button>
+      <button class="cat-tab" onclick="showCat('tpa', this)">
+        🏥 TPAs <span class="count">12+</span>
+      </button>
+    </div>
+
+    <!-- GOVT SCHEMES -->
+    <div class="cat-section active" id="cat-govt">
+      <div class="partner-grid">
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏛️</div>
+          <h4>CGHS</h4>
+          <p>Central Government</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏛️</div>
+          <h4>DGEHS</h4>
+          <p>Delhi Govt Employees</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>PMJAY</h4>
+          <p>Ayushman Bharat</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSURANCE -->
+    <div class="cat-section" id="cat-insurance">
+      <div class="partner-grid">
+        <div class="partner-card reveal">
+          <div class="partner-logo">🛡️</div>
+          <h4>GIPSA</h4>
+          <p>Public Insurers</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">⭐</div>
+          <h4>Star Health</h4>
+          <p>Standalone Health</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🔷</div>
+          <h4>HDFC Ergo</h4>
+          <p>Private Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🔶</div>
+          <h4>ICICI Lombard</h4>
+          <p>Private Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🟢</div>
+          <h4>Bajaj Allianz</h4>
+          <p>Private Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🔵</div>
+          <h4>Tata AIG</h4>
+          <p>Private Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🟣</div>
+          <h4>Max Bupa</h4>
+          <p>Standalone Health</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🟡</div>
+          <h4>SBI General</h4>
+          <p>Private Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🟠</div>
+          <h4>New India</h4>
+          <p>Public Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🔴</div>
+          <h4>Oriental</h4>
+          <p>Public Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🟤</div>
+          <h4>National</h4>
+          <p>Public Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">⚪</div>
+          <h4>United India</h4>
+          <p>Public Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">⬛</div>
+          <h4>Reliance</h4>
+          <p>Private Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🟦</div>
+          <h4>Aditya Birla</h4>
+          <p>Private Insurer</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🟩</div>
+          <h4>Religare</h4>
+          <p>Standalone Health</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TPA -->
+    <div class="cat-section" id="cat-tpa">
+      <div class="partner-grid">
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Mediassist</h4>
+          <p>Leading TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>MD India</h4>
+          <p>Major TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Paramount</h4>
+          <p>Health TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>MediCare</h4>
+          <p>Health TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Safeway</h4>
+          <p>TPA Services</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Raksha</h4>
+          <p>Health TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Vipul Medcorp</h4>
+          <p>Major TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Health India</h4>
+          <p>TPA Services</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>United Health Care</h4>
+          <p>Global TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>East West Assist</h4>
+          <p>Health TPA</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Family Health Plan</h4>
+          <p>TPA Services</p>
+        </div>
+        <div class="partner-card reveal">
+          <div class="partner-logo">🏥</div>
+          <h4>Alankit</h4>
+          <p>TPA Services</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section style="background:var(--off)">
+  <div class="container">
+    <div class="sec-center reveal">
+      <span class="sec-eyebrow">Our Process</span>
+      <h2 class="sec-title">How We Get You <span class="gold">Empanelled</span></h2>
+      <p class="sec-sub">A clear, transparent process — you know exactly where you stand at every step.</p>
+    </div>
+
+    <div class="process-timeline reveal">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <h4>Eligibility Check</h4>
+        <p>We assess your hospital's infrastructure, staff, and documentation against each insurer's requirements.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <h4>Documentation</h4>
+        <p>We prepare and submit the complete application package — forms, certificates, staff lists, and compliance docs.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <h4>Follow-Up</h4>
+        <p>Our team coordinates with the insurer/TPA, handles queries, and arranges inspections if required.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">04</div>
+        <h4>Approval & Support</h4>
+        <p>Once empanelled, we support you with cashless approvals, claims training, and ongoing coordination.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===== PROCESS TIMELINE ===== */
+.process-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative;margin-top:20px}
+.process-timeline::before{content:'';position:absolute;top:40px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 8px,transparent 8px,transparent 16px);opacity:.35;z-index:0}
+.proc-step{position:relative;z-index:1;background:white;border:1px solid var(--line);border-radius:20px;padding:32px 24px;text-align:center;transition:all .4s cubic-bezier(.2,.9,.3,1.1)}
+.proc-step:hover{transform:translateY(-8px);border-color:rgba(212,160,23,.4);box-shadow:0 30px 60px rgba(10,26,58,.1)}
+.proc-step .proc-num{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:30px;font-weight:900;margin:0 auto 20px;box-shadow:0 12px 30px rgba(10,26,58,.25),inset 0 0 0 4px rgba(212,160,23,.15);position:relative;transition:transform .4s}
+.proc-step .proc-num::after{content:'';position:absolute;inset:-8px;border-radius:50%;border:2px dashed rgba(212,160,23,.3);animation:ringRotateP 20s linear infinite}
+@keyframes ringRotateP{to{transform:rotate(360deg)}}
+.proc-step:hover .proc-num{transform:scale(1.06)}
+.proc-step h4{font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px;letter-spacing:-.3px}
+.proc-step p{font-size:13.5px;color:var(--muted);line-height:1.65}
+@media(max-width:1000px){.process-timeline{grid-template-columns:repeat(2,1fr)}.process-timeline::before{display:none}}
+@media(max-width:700px){.process-timeline{grid-template-columns:1fr}.proc-step{padding:24px 22px}.proc-step .proc-num{width:64px;height:64px;font-size:24px}}
+</style><!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-in">
+    <h2>Ready to Get Empanelled?</h2>
+    <p>Tell us which insurers you want to work with — we'll handle the entire process from application to approval.</p>
+    <a href="contact.html" class="btn-cta">💬 Start Your Empanelment</a>
+    <a href="tel:8683846801" class="btn-cta btn-ghost">📞 Call 8683846801</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <div class="foot-brand-logo">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="msG3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d4a017"/><stop offset="100%" stop-color="#b8860b"/></linearGradient></defs>
+              <circle cx="50" cy="50" r="46" fill="#0a1a3a" stroke="url(#msG3)" stroke-width="2.5"/>
+              <path d="M50 22 L50 78 M42 30 L50 22 L58 30 M34 38 L34 62 M66 38 L66 62 M34 50 L66 50" stroke="url(#msG3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 70 Q50 66 72 70" stroke="url(#msG3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="foot-brand-text">
+            <b>MS HEALTHCARE</b>
+            <small>Services</small>
+          </div>
+        </div>
+        <p class="foot-desc">India's trusted hospital consultancy for insurance empanelment, NABH/NABL/JCI accreditation, complete facility setup, staffing, and medical tourism.</p>
+        <div class="foot-social">
+          <a href="tel:8683846801" title="Call">📞</a>
+          <a href="https://wa.me/918683846801" title="WhatsApp" target="_blank">💬</a>
+          <a href="mailto:mshealthcare3@gmail.com" title="Email">✉️</a>
+          <a href="#" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="services.html">Quality Accreditation</a>
+        <a href="services.html">Hospital Setup</a>
+        <a href="empanelment.html">Insurance Empanelment</a>
+        <a href="services.html">Marketing & Branding</a>
+        <a href="services.html">Staffing Solutions</a>
+        <a href="services.html">Claim Processing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="empanelment.html">Empanelment</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:8683846801">Free Consultation</a>
+      </div>
+      <div class="foot-col foot-contact">
+        <h5>Get in Touch</h5>
+        <p><span class="ic">📞</span> <a href="tel:8683846801" style="color:rgba(255,255,255,.85)">8683846801</a></p>
+        <p><span class="ic">✉️</span> <a href="mailto:mshealthcare3@gmail.com" style="color:rgba(255,255,255,.85);word-break:break-all">mshealthcare3@gmail.com</a></p>
+        <p><span class="ic">💬</span> <a href="https://wa.me/918683846801" style="color:rgba(255,255,255,.85)">WhatsApp Chat</a></p>
+        <p><span class="ic">🌐</span> Serving PAN India</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 <strong style="color:white">MS Healthcare Services</strong> — All rights reserved.</div>
+      <div>Website by <a href="https://vaan-consultancy.pages.dev">VAAN Consultancy</a></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* ===== CTA ===== */
+.cta-banner{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:var(--navy);padding:90px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.25),transparent 45%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.15),transparent 45%);pointer-events:none}
+.cta-in{position:relative;z-index:2;max-width:800px;margin:0 auto}
+.cta-banner h2{font-family:'Poppins',sans-serif;font-size:clamp(28px,4.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px}
+.cta-banner p{font-size:17px;color:rgba(10,26,58,.8);margin-bottom:34px;line-height:1.65;font-weight:500}
+.btn-cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:white;padding:16px 32px;border-radius:12px;font-weight:800;font-size:15px;box-shadow:0 10px 30px rgba(10,26,58,.3);transition:all .3s;text-decoration:none;font-family:inherit;letter-spacing:.3px}
+.btn-cta:hover{background:#000;transform:translateY(-3px);box-shadow:0 16px 40px rgba(10,26,58,.45)}
+.btn-ghost{background:rgba(10,26,58,.08);color:var(--navy);border:2px solid rgba(10,26,58,.2);margin-left:10px}
+.btn-ghost:hover{background:var(--navy);color:white}
+
+/* ===== FOOTER ===== */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:70px 0 28px;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:44px;margin-bottom:44px}
+.foot-brand{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.foot-brand-logo{width:48px;height:48px;flex-shrink:0}
+.foot-brand-logo svg{width:100%;height:100%}
+.foot-brand-text b{font-family:'Poppins',sans-serif;font-size:18px;font-weight:800;color:white;letter-spacing:-.3px;display:block}
+.foot-brand-text small{font-size:9px;letter-spacing:2px;color:var(--gold);font-weight:700;text-transform:uppercase;margin-top:3px;display:block}
+.foot-desc{font-size:13.5px;line-height:1.75;margin-bottom:22px;color:rgba(255,255,255,.65)}
+.foot-social{display:flex;gap:12px}
+.foot-social a{width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .3s}
+.foot-social a:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(212,160,23,.4)}
+.foot-col h5{font-size:12px;letter-spacing:2px;font-weight:800;color:white;margin-bottom:20px;text-transform:uppercase}
+.foot-col a{display:block;font-size:13.5px;padding:6px 0;transition:all .25s;color:rgba(255,255,255,.65)}
+.foot-col a:hover{color:var(--gold);transform:translateX(4px)}
+.foot-contact p{font-size:13.5px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start;line-height:1.55;color:rgba(255,255,255,.65)}
+.foot-contact .ic{color:var(--gold);flex-shrink:0;font-size:15px;margin-top:2px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12.5px;color:rgba(255,255,255,.5)}
+.foot-bottom a{color:var(--gold);font-weight:600}
+.foot-bottom a:hover{color:var(--gold-light)}
+
+@media(max-width:1000px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:700px){
+  .cta-banner{padding:60px 20px}
+  .btn-ghost{margin-left:0;margin-top:10px}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  footer{padding:50px 0 22px}
+}
+</style>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+window.addEventListener('scroll',()=>{const n=document.getElementById('nav');if(window.scrollY>60)n.classList.add('scrolled');else n.classList.remove('scrolled')},{passive:true});
+
+/* Tab switching */
+function showCat(cat, btn){
+  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.cat-section').forEach(s => s.classList.remove('active'));
+  const target = document.getElementById('cat-' + cat);
+  if (target) target.classList.add('active');
+  /* Re-reveal items in the newly opened section */
+  target.querySelectorAll('.reveal').forEach((el, i) => {
+    el.classList.remove('in');
+    setTimeout(() => el.classList.add('in'), i * 40);
+  });
+}
+
+/* Reveal */
+(function(){
+  const t = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)){ t.forEach(x => x.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), i*50); io.unobserve(e.target); }});
+  },{threshold:0.1});
+  t.forEach(x => io.observe(x));
+})();
+
+console.log('[EMPANELMENT] Loaded');
+</script>
+
+</body>
+</html>
