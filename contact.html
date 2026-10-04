@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — MS Healthcare Services</title>
+<meta name="description" content="Contact MS Healthcare Services — free consultation for hospital empanelment, accreditation, setup, and more. Call 8683846801 or send an enquiry.">
+<meta name="theme-color" content="#0a1a3a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a1a3a'/><text x='50' y='68' font-size='60' text-anchor='middle' fill='%23d4a017' font-family='Arial' font-weight='bold'>MS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,Arial,sans-serif;background:#ffffff;color:#1a1a1a;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--navy:#0a1a3a;--navy-2:#1a2f5c;--navy-3:#254080;--gold:#d4a017;--gold-2:#b8860b;--gold-light:#e8c547;--cream:#fafaf7;--off:#f8f9fc;--white:#ffffff;--muted:#64748b;--line:#e2e8f0}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px 0;transition:all .3s}
+.nav.scrolled{box-shadow:0 4px 20px rgba(10,26,58,.06);padding:12px 0}
+.nav-in{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-logo{width:52px;height:52px;flex-shrink:0}
+.brand-logo svg{width:100%;height:100%}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text b{font-family:'Poppins',sans-serif;font-size:17px;color:var(--navy);font-weight:800;letter-spacing:-.3px}
+.brand-text small{font-size:9.5px;color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600;color:var(--navy)}
+.nav-links a{transition:color .25s;position:relative;padding:6px 0}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:.3s;transform-origin:left}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--gold)}
+.nav-cta{background:var(--navy);color:white !important;padding:12px 24px;border-radius:99px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 6px 20px rgba(10,26,58,.2)}
+.nav-cta:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 10px 28px rgba(212,160,23,.4)}
+.nav-cta::after{display:none !important}
+.hamburger{display:none;background:transparent;border:0;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px}
+
+/* ===== PAGE HERO ===== */
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,var(--navy-3) 100%);color:white;padding:90px 0 100px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-30%;right:-20%;width:60%;height:120%;background:radial-gradient(circle,rgba(212,160,23,.15),transparent 60%);pointer-events:none;animation:heroGlowC 10s ease-in-out infinite alternate}
+@keyframes heroGlowC{0%{transform:translate(0,0) scale(1);opacity:.8}100%{transform:translate(-40px,20px) scale(1.15);opacity:1}}
+.page-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse at center,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center,black 20%,transparent 70%)}
+.page-hero-in{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:5}
+.page-hero .eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(212,160,23,.15);border:1px solid rgba(212,160,23,.4);color:var(--gold-light);padding:8px 18px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+.page-hero .eyebrow::before{content:'';width:8px;height:8px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px var(--gold);animation:pulseGoldC 2s infinite}
+@keyframes pulseGoldC{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.page-hero h1{font-family:'Poppins',sans-serif;font-size:clamp(38px,5.5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:20px}
+.page-hero h1 .gold{color:var(--gold)}
+.page-hero p{font-size:17px;color:rgba(255,255,255,.8);max-width:640px;line-height:1.7}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{background:white;border-bottom:1px solid var(--line);padding:16px 0;font-size:13px;color:var(--muted)}
+.breadcrumb-in{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.breadcrumb a{color:var(--navy);font-weight:600;transition:color .2s}
+.breadcrumb a:hover{color:var(--gold)}
+.breadcrumb .sep{color:var(--muted)}
+.breadcrumb .current{color:var(--muted);font-weight:500}
+
+/* ===== SECTION BASE ===== */
+section{padding:100px 0;position:relative}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+.sec-eyebrow::before{content:'';width:24px;height:2px;background:var(--gold)}
+.sec-title{font-family:'Poppins',sans-serif;font-size:clamp(30px,4.2vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--navy);margin-bottom:16px}
+.sec-title .gold{color:var(--gold)}
+.sec-sub{color:var(--muted);font-size:16.5px;max-width:680px;line-height:1.7;margin-bottom:56px}
+.sec-center{text-align:center}
+.sec-center .sec-sub{margin-left:auto;margin-right:auto}
+
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.3,1.1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ===== CONTACT CARDS ===== */
+.contact-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:60px}
+.contact-card{background:white;border:1.5px solid var(--line);border-radius:20px;padding:32px 24px;text-align:center;transition:all .4s cubic-bezier(.2,.9,.3,1.1);position:relative;overflow:hidden}
+.contact-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));transform:scaleX(0);transform-origin:left;transition:.4s}
+.contact-card:hover{transform:translateY(-6px);border-color:rgba(212,160,23,.4);box-shadow:0 24px 50px rgba(10,26,58,.1)}
+.contact-card:hover::before{transform:scaleX(1)}
+.contact-card .ic{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(212,160,23,.15),rgba(10,26,58,.05));border:1px solid rgba(212,160,23,.25);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 18px;transition:all .35s}
+.contact-card:hover .ic{background:var(--navy);color:var(--gold);transform:rotate(-6deg);border-color:var(--navy)}
+.contact-card h4{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:var(--navy);letter-spacing:-.3px;margin-bottom:10px}
+.contact-card p{font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.contact-card a{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:700;font-size:13.5px;transition:gap .3s}
+.contact-card a:hover{gap:10px}
+
+/* ===== FORM + MAP ===== */
+.form-map{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:start}
+
+.form-box{background:white;border-radius:24px;padding:46px 42px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(10,26,58,.08);position:relative;overflow:hidden}
+.form-box::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--navy))}
+.form-box h3{font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-.6px;margin-bottom:8px}
+.form-box .sub{font-size:14.5px;color:var(--muted);margin-bottom:30px;line-height:1.6}
+
+.form-success{display:none;background:rgba(212,160,23,.1);border:1.5px solid var(--gold);border-radius:14px;padding:18px 22px;margin-bottom:24px;color:var(--navy);font-weight:600;font-size:14px;line-height:1.55;align-items:flex-start;gap:12px}
+.form-success.show{display:flex}
+.form-success .ic{font-size:22px;flex-shrink:0}
+
+.fld{margin-bottom:18px}
+.fld label{display:block;font-size:12.5px;font-weight:700;color:var(--navy);letter-spacing:.4px;margin-bottom:8px;text-transform:uppercase}
+.fld label .req{color:var(--gold);margin-left:2px}
+.fld input,.fld select,.fld textarea{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-family:inherit;font-size:14px;background:var(--off);transition:all .25s;color:var(--navy)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--gold);background:white;box-shadow:0 0 0 4px rgba(212,160,23,.12)}
+.fld textarea{min-height:110px;resize:vertical;font-family:inherit}
+.fld select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230a1a3a' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+.form-submit{margin-top:24px;width:100%;padding:17px;background:var(--navy);color:white;border:0;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer;font-family:inherit;letter-spacing:.4px;transition:all .28s;box-shadow:0 10px 30px rgba(10,26,58,.25)}
+.form-submit:hover:not(:disabled){background:var(--gold);color:var(--navy);transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,160,23,.4)}
+.form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+.form-note{font-size:12.5px;color:var(--muted);margin-top:16px;line-height:1.55;display:flex;gap:8px;align-items:flex-start}
+.form-note .ic{color:var(--gold);flex-shrink:0;font-size:15px;margin-top:1px}
+
+/* Map / Info side */
+.info-side{display:flex;flex-direction:column;gap:22px}
+.map-box{border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(10,26,58,.12);height:340px;background:var(--off);position:relative}
+.map-box iframe{width:100%;height:100%;border:0;display:block}
+
+.quick-info{background:white;border:1px solid var(--line);border-radius:20px;padding:30px 28px}
+.quick-info h4{font-family:'Poppins',sans-serif;font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-.3px;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.quick-info h4 .ic{font-size:20px}
+.info-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:0;padding-bottom:0}
+.info-row .ic{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,rgba(212,160,23,.15),rgba(10,26,58,.05));border:1px solid rgba(212,160,23,.25);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.info-row .body b{display:block;font-size:12px;font-weight:800;color:var(--navy);letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px}
+.info-row .body span{font-size:14px;color:var(--muted);line-height:1.5}
+.info-row .body a{color:var(--gold);font-weight:700}
+.info-row .body a:hover{color:var(--gold-2)}
+
+@media(max-width:1000px){
+  .contact-cards{grid-template-columns:repeat(2,1fr)}
+  .form-map{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:700px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:20px;gap:16px;box-shadow:0 20px 30px rgba(0,0,0,.1);border-top:1px solid var(--line)}
+  .hamburger{display:flex}
+  .brand-text b{font-size:15px}
+  .brand-text small{font-size:8px}
+  .brand-logo{width:44px;height:44px}
+  .page-hero{padding:60px 0 70px}
+  .page-hero h1{font-size:clamp(30px,9vw,44px);letter-spacing:-1.5px}
+  section{padding:70px 0}
+  .contact-cards{grid-template-columns:1fr;gap:16px}
+  .form-box{padding:32px 24px}
+  .form-row{grid-template-columns:1fr}
+  .map-box{height:280px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="msG1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d4a017"/><stop offset="100%" stop-color="#b8860b"/></linearGradient></defs>
+          <circle cx="50" cy="50" r="46" fill="#0a1a3a" stroke="url(#msG1)" stroke-width="2.5"/>
+          <path d="M50 22 L50 78 M42 30 L50 22 L58 30 M34 38 L34 62 M66 38 L66 62 M34 50 L66 50" stroke="url(#msG1)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 70 Q50 66 72 70" stroke="url(#msG1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <b>MS HEALTHCARE</b>
+        <small>Services</small>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="empanelment.html">Empanelment</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="tel:8683846801" class="nav-cta">📞 Talk to Expert</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-in">
+    <span class="eyebrow">Get in Touch</span>
+    <h1>
+      Let's Discuss Your<br>
+      <span class="gold">Hospital's Growth.</span>
+    </h1>
+    <p>Free consultation. No pressure. Just a real conversation about how MS Healthcare Services can help your hospital empanel, accredit, and grow.</p>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-in">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <span class="current">Contact</span>
+  </div>
+</div><!-- ===== CONTACT SECTION ===== -->
+<section>
+  <div class="container">
+
+    <div class="sec-center reveal">
+      <span class="sec-eyebrow">Reach Out</span>
+      <h2 class="sec-title">We're Just a <span class="gold">Call Away</span></h2>
+      <p class="sec-sub">Choose whichever way is easiest — phone, WhatsApp, email, or the form below. We respond within 24 hours.</p>
+    </div>
+
+    <!-- CONTACT CARDS -->
+    <div class="contact-cards">
+      <div class="contact-card reveal">
+        <div class="ic">📞</div>
+        <h4>Call Us</h4>
+        <p>Direct line to our team — fastest response.</p>
+        <a href="tel:8683846801">8683846801 →</a>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="ic">💬</div>
+        <h4>WhatsApp</h4>
+        <p>Chat with us instantly on WhatsApp.</p>
+        <a href="https://wa.me/918683846801" target="_blank">Start Chat →</a>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="ic">✉️</div>
+        <h4>Email</h4>
+        <p>Send us details — we'll respond with a plan.</p>
+        <a href="mailto:mshealthcare3@gmail.com">Send Email →</a>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="ic">🌐</div>
+        <h4>Coverage</h4>
+        <p>Serving hospitals across all of India.</p>
+        <a href="#enquiry">PAN India →</a>
+      </div>
+    </div>
+
+    <!-- FORM + INFO -->
+    <div class="form-map" id="enquiry">
+
+      <!-- Form -->
+      <div class="form-box reveal">
+        <div class="form-success" id="formSuccess">
+          <span class="ic">✅</span>
+          <div>Thank you! Your enquiry has been received. Our team will contact you within 24 hours.</div>
+        </div>
+
+        <h3>Send an Enquiry</h3>
+        <p class="sub">Fill this form and our team will reach out within 24 hours with a tailored plan.</p>
+
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="fld">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" id="cName" placeholder="Your full name" required>
+            </div>
+            <div class="fld">
+              <label>Phone Number <span class="req">*</span></label>
+              <input type="tel" id="cPhone" placeholder="10-digit mobile" pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="fld">
+              <label>Email</label>
+              <input type="email" id="cEmail" placeholder="you@example.com">
+            </div>
+            <div class="fld">
+              <label>Hospital / Clinic Name</label>
+              <input type="text" id="cHospital" placeholder="Your facility name">
+            </div>
+          </div>
+
+          <div class="fld">
+            <label>Service Required <span class="req">*</span></label>
+            <select id="cService" required>
+              <option value="">Select a service</option>
+              <option>Insurance Empanelment</option>
+              <option>NABH / NABL / JCI Accreditation</option>
+              <option>Hospital Setup</option>
+              <option>Marketing & Branding</option>
+              <option>Staffing Solutions</option>
+              <option>Claim Processing</option>
+              <option>Medical Tourism</option>
+              <option>Fund Raising</option>
+              <option>Patient Satisfaction</option>
+              <option>Multiple Services / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="fld">
+            <label>Message</label>
+            <textarea id="cMessage" placeholder="Briefly describe your requirement (optional)"></textarea>
+          </div>
+
+          <button type="submit" class="form-submit" id="submitBtn">Send Enquiry →</button>
+
+          <div class="form-note">
+            <span class="ic">ℹ️</span>
+            <span>Your information is kept confidential. We typically respond within 24 hours on working days.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Info Side -->
+      <div class="info-side reveal">
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=Delhi+India&output=embed" loading="lazy"></iframe>
+        </div>
+
+        <div class="quick-info">
+          <h4><span class="ic">📋</span> Quick Contact</h4>
+          <div class="info-row">
+            <div class="ic">📞</div>
+            <div class="body">
+              <b>Phone</b>
+              <span><a href="tel:8683846801">8683846801</a></span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="ic">💬</div>
+            <div class="body">
+              <b>WhatsApp</b>
+              <span><a href="https://wa.me/918683846801" target="_blank">Chat instantly</a></span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="ic">✉️</div>
+            <div class="body">
+              <b>Email</b>
+              <span><a href="mailto:mshealthcare3@gmail.com">mshealthcare3@gmail.com</a></span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="ic">🌐</div>
+            <div class="body">
+              <b>Coverage</b>
+              <span>Serving hospitals across all of India</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="ic">⏱️</div>
+            <div class="body">
+              <b>Response Time</b>
+              <span>Within 24 hours on working days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-in">
+    <h2>Free Consultation. No Obligation.</h2>
+    <p>Talk to our team about your hospital's specific needs — we'll recommend the right approach, no pressure.</p>
+    <a href="tel:8683846801" class="btn-cta">📞 Call 8683846801</a>
+    <a href="https://wa.me/918683846801" class="btn-cta btn-ghost" target="_blank">💬 WhatsApp Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <div class="foot-brand-logo">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="msG3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d4a017"/><stop offset="100%" stop-color="#b8860b"/></linearGradient></defs>
+              <circle cx="50" cy="50" r="46" fill="#0a1a3a" stroke="url(#msG3)" stroke-width="2.5"/>
+              <path d="M50 22 L50 78 M42 30 L50 22 L58 30 M34 38 L34 62 M66 38 L66 62 M34 50 L66 50" stroke="url(#msG3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 70 Q50 66 72 70" stroke="url(#msG3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="foot-brand-text">
+            <b>MS HEALTHCARE</b>
+            <small>Services</small>
+          </div>
+        </div>
+        <p class="foot-desc">India's trusted hospital consultancy for insurance empanelment, NABH/NABL/JCI accreditation, complete facility setup, staffing, and medical tourism.</p>
+        <div class="foot-social">
+          <a href="tel:8683846801" title="Call">📞</a>
+          <a href="https://wa.me/918683846801" title="WhatsApp" target="_blank">💬</a>
+          <a href="mailto:mshealthcare3@gmail.com" title="Email">✉️</a>
+          <a href="#" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="services.html">Quality Accreditation</a>
+        <a href="services.html">Hospital Setup</a>
+        <a href="empanelment.html">Insurance Empanelment</a>
+        <a href="services.html">Marketing & Branding</a>
+        <a href="services.html">Staffing Solutions</a>
+        <a href="services.html">Claim Processing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="empanelment.html">Empanelment</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:8683846801">Free Consultation</a>
+      </div>
+      <div class="foot-col foot-contact">
+        <h5>Get in Touch</h5>
+        <p><span class="ic">📞</span> <a href="tel:8683846801" style="color:rgba(255,255,255,.85)">8683846801</a></p>
+        <p><span class="ic">✉️</span> <a href="mailto:mshealthcare3@gmail.com" style="color:rgba(255,255,255,.85);word-break:break-all">mshealthcare3@gmail.com</a></p>
+        <p><span class="ic">💬</span> <a href="https://wa.me/918683846801" style="color:rgba(255,255,255,.85)">WhatsApp Chat</a></p>
+        <p><span class="ic">🌐</span> Serving PAN India</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 <strong style="color:white">MS Healthcare Services</strong> — All rights reserved.</div>
+      <div>Website by <a href="https://vaan-consultancy.pages.dev">VAAN Consultancy</a></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* ===== CTA ===== */
+.cta-banner{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:var(--navy);padding:90px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.25),transparent 45%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.15),transparent 45%);pointer-events:none}
+.cta-in{position:relative;z-index:2;max-width:800px;margin:0 auto}
+.cta-banner h2{font-family:'Poppins',sans-serif;font-size:clamp(28px,4.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px}
+.cta-banner p{font-size:17px;color:rgba(10,26,58,.8);margin-bottom:34px;line-height:1.65;font-weight:500}
+.btn-cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:white;padding:16px 32px;border-radius:12px;font-weight:800;font-size:15px;box-shadow:0 10px 30px rgba(10,26,58,.3);transition:all .3s;text-decoration:none;font-family:inherit;letter-spacing:.3px}
+.btn-cta:hover{background:#000;transform:translateY(-3px);box-shadow:0 16px 40px rgba(10,26,58,.45)}
+.btn-ghost{background:rgba(10,26,58,.08);color:var(--navy);border:2px solid rgba(10,26,58,.2);margin-left:10px}
+.btn-ghost:hover{background:var(--navy);color:white}
+
+/* ===== FOOTER ===== */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:70px 0 28px;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:44px;margin-bottom:44px}
+.foot-brand{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.foot-brand-logo{width:48px;height:48px;flex-shrink:0}
+.foot-brand-logo svg{width:100%;height:100%}
+.foot-brand-text b{font-family:'Poppins',sans-serif;font-size:18px;font-weight:800;color:white;letter-spacing:-.3px;display:block}
+.foot-brand-text small{font-size:9px;letter-spacing:2px;color:var(--gold);font-weight:700;text-transform:uppercase;margin-top:3px;display:block}
+.foot-desc{font-size:13.5px;line-height:1.75;margin-bottom:22px;color:rgba(255,255,255,.65)}
+.foot-social{display:flex;gap:12px}
+.foot-social a{width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .3s}
+.foot-social a:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(212,160,23,.4)}
+.foot-col h5{font-size:12px;letter-spacing:2px;font-weight:800;color:white;margin-bottom:20px;text-transform:uppercase}
+.foot-col a{display:block;font-size:13.5px;padding:6px 0;transition:all .25s;color:rgba(255,255,255,.65)}
+.foot-col a:hover{color:var(--gold);transform:translateX(4px)}
+.foot-contact p{font-size:13.5px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start;line-height:1.55;color:rgba(255,255,255,.65)}
+.foot-contact .ic{color:var(--gold);flex-shrink:0;font-size:15px;margin-top:2px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12.5px;color:rgba(255,255,255,.5)}
+.foot-bottom a{color:var(--gold);font-weight:600}
+.foot-bottom a:hover{color:var(--gold-light)}
+
+@media(max-width:1000px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:700px){
+  .cta-banner{padding:60px 20px}
+  .btn-ghost{margin-left:0;margin-top:10px}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  footer{padding:50px 0 22px}
+}
+</style>
+
+<script>
+/* ==========================================================
+   NAV
+   ========================================================== */
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  if(window.scrollY>60) n.classList.add('scrolled');
+  else n.classList.remove('scrolled');
+},{passive:true});
+
+/* ==========================================================
+   REVEAL
+   ========================================================== */
+(function(){
+  const t = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)){ t.forEach(x => x.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), i*60); io.unobserve(e.target); }});
+  },{threshold:0.12});
+  t.forEach(x => io.observe(x));
+})();
+
+/* ==========================================================
+   CONTACT FORM — Supabase save
+   ========================================================== */
+const SUPA_URL = "https://xvtxpllmfwgnlrffbcqz.supabase.co";
+const SUPA_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh2dHhwbGxtZndnbmxyZmZiY3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA0Mzg2OTYsImV4cCI6MjEwNjAxNDY5Nn0.JC1Za7PdNGLngpupBovq_DqI-vHRVBOovLdEe-w1Ap0";
+
+async function submitForm(e){
+  e.preventDefault();
+
+  const btn = document.getElementById('submitBtn');
+  const success = document.getElementById('formSuccess');
+  const form = document.getElementById('contactForm');
+
+  const name = document.getElementById('cName').value.trim();
+  const phone = document.getElementById('cPhone').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  const hospital = document.getElementById('cHospital').value.trim();
+  const service = document.getElementById('cService').value;
+  const message = document.getElementById('cMessage').value.trim();
+
+  if (!name || !phone || !service){
+    alert("Please fill all required fields.");
+    return;
+  }
+  if (!/^[0-9]{10}$/.test(phone)){
+    alert("Please enter a valid 10-digit mobile number.");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "Sending...";
+
+  try {
+    const res = await fetch(`${SUPA_URL}/rest/v1/ms_healthcare_inquiries`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPA_KEY,
+        "Authorization": "Bearer " + SUPA_KEY,
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        email: email || null,
+        hospital: hospital || null,
+        service: service,
+        message: message || null
+      })
+    });
+
+    if (!res.ok){
+      console.error("Save error:", await res.text());
+      alert("Could not submit. Please call 8683846801 directly.");
+      return;
+    }
+
+    form.reset();
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => success.classList.remove('show'), 9000);
+
+  } catch (err){
+    console.error("Network error:", err);
+    alert("Connection issue. Please call 8683846801 directly.");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Send Enquiry →";
+  }
+}
+
+/* Smooth scroll for anchor links */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href');
+    if (id.length > 1){
+      const el = document.querySelector(id);
+      if (el){ e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    }
+  });
+});
+
+console.log('[CONTACT] Loaded');
+</script>
+
+</body>
+</html>
